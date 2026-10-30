@@ -2,16 +2,16 @@
 
 A dependency-free English/Vietnamese landing site for **Trap**, the hidden-trap mobile platformer. The production target is:
 
-- English: <https://luongnv.com/trap-website/>
-- Vietnamese: <https://luongnv.com/trap-website/vi/>
+- English: <https://pitfall.lamnv.com/>
+- Vietnamese: <https://pitfall.lamnv.com/vi/>
 
 ### Public submission pages
 
 | Purpose | English | Vietnamese |
 | --- | --- | --- |
-| Support / issue forms | <https://luongnv.com/trap-website/support/> | <https://luongnv.com/trap-website/vi/support/> |
-| Privacy notice | <https://luongnv.com/trap-website/privacy/> | <https://luongnv.com/trap-website/vi/privacy/> |
-| Changelog | <https://luongnv.com/trap-website/changelog/> | <https://luongnv.com/trap-website/vi/changelog/> |
+| Support / issue forms | <https://pitfall.lamnv.com/support/> | <https://pitfall.lamnv.com/vi/support/> |
+| Privacy notice | <https://pitfall.lamnv.com/privacy/> | <https://pitfall.lamnv.com/vi/privacy/> |
+| Changelog | <https://pitfall.lamnv.com/changelog/> | <https://pitfall.lamnv.com/vi/changelog/> |
 
 The store section is intentionally informational: Google Play and Apple App Store are both **coming soon**, with no fabricated download links, dates, prices, ratings, or testimonials.
 
@@ -41,7 +41,7 @@ If the repository owner, repository name, or canonical host changes, update all 
 - `sitemap.xml`, `robots.txt`, `llms.txt`, this README, and the workflow/Pages setting if needed
 - the social-card URL and any absolute links in validation expectations
 
-`robots.txt` is scoped to the `/trap-website/` project path when served by GitHub Pages; it is not a domain-root robots policy. A domain owner should maintain any separate root-level policy.
+`robots.txt` is served at the root of pitfall.lamnv.com, so it is the domain-root robots policy for the site.
 
 ## Content provenance
 

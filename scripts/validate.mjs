@@ -4,11 +4,11 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const base = 'https://luongnv.com/trap-website/';
+const base = 'https://pitfall.lamnv.com/';
 const issueForms = {
-  bug: 'https://github.com/luongnv89/trap-website/issues/new?template=bug_report.yml',
-  feature: 'https://github.com/luongnv89/trap-website/issues/new?template=feature_request.yml',
-  feedback: 'https://github.com/luongnv89/trap-website/issues/new?template=feedback.yml',
+  bug: 'https://github.com/nguyenvanlamm/trap-website/issues/new?template=bug_report.yml',
+  feature: 'https://github.com/nguyenvanlamm/trap-website/issues/new?template=feature_request.yml',
+  feedback: 'https://github.com/nguyenvanlamm/trap-website/issues/new?template=feedback.yml',
 };
 const pages = [
   { file: 'index.html', lang: 'en', canonical: base, languageHref: 'vi/index.html', type: 'VideoGame', mustContain: ['The factory', 'Scan the illustration'], faqCount: 5 },
@@ -29,7 +29,7 @@ function localTarget(pageFile, reference) {
   const url = new URL(reference, pageUrl);
   if (url.protocol !== 'http:' && url.protocol !== 'https:') return null;
   if (url.origin !== new URL(base).origin) return null;
-  const path = url.pathname.replace(/^\/trap-website\/?/, '');
+  const path = url.pathname.replace(/^\//, '');
   const clean = path || 'index.html';
   if (clean.endsWith('/')) return join(root, clean, 'index.html');
   return join(root, clean);
@@ -160,7 +160,7 @@ check(llms.includes('not a guarantee of AI ranking'), 'llms.txt must state its f
 const readme = read('README.md');
 for (const route of ['support/', 'privacy/', 'changelog/']) check(readme.includes(`${base}${route}`), `README is missing ${route} submission URL`);
 check(readme.includes('privacy labels'), 'README must document store-privacy follow-up');
-check(readme.includes('not a domain-root robots policy'), 'README must document project-path robots scope');
+check(readme.includes('domain-root robots policy'), 'README must document robots scope');
 
 if (errors.length) {
   console.error(`Static validation failed (${errors.length} issue${errors.length === 1 ? '' : 's'}):`);

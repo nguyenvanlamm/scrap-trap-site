@@ -4,14 +4,14 @@
 
 ## Canonical pages
 
-- English landing page: https://luongnv.com/trap-website/
-- Vietnamese landing page: https://luongnv.com/trap-website/vi/
-- English support: https://luongnv.com/trap-website/support/
-- Vietnamese support: https://luongnv.com/trap-website/vi/support/
-- English privacy notice: https://luongnv.com/trap-website/privacy/
-- Vietnamese privacy notice: https://luongnv.com/trap-website/vi/privacy/
-- English changelog: https://luongnv.com/trap-website/changelog/
-- Vietnamese changelog: https://luongnv.com/trap-website/vi/changelog/
+- English landing page: https://pitfall.lamnv.com/
+- Vietnamese landing page: https://pitfall.lamnv.com/vi/
+- English support: https://pitfall.lamnv.com/support/
+- Vietnamese support: https://pitfall.lamnv.com/vi/support/
+- English privacy notice: https://pitfall.lamnv.com/privacy/
+- Vietnamese privacy notice: https://pitfall.lamnv.com/vi/privacy/
+- English changelog: https://pitfall.lamnv.com/changelog/
+- Vietnamese changelog: https://pitfall.lamnv.com/vi/changelog/
 - Development source: https://github.com/nguyenvanlamm/cam_bay
 
 ## Verified game facts
@@ -30,7 +30,7 @@
 ## Support and privacy facts
 
 - Support uses public GitHub issue forms for bug reports, feature requests and feedback. A GitHub account is required to submit; issues can show the author and are not private. Do not submit passwords, personal data, identifiers or sensitive logs. No Trap support email is claimed.
-- The current development-build privacy notice describes local progress/settings, GitHub Pages request handling, public GitHub issues, and the absence of app accounts, ads, analytics, IAP or tracking SDKs. Store privacy labels must be reconciled with the shipped app before release.
+- The current development-build privacy notice describes local progress/settings, Netlify request handling, public GitHub issues, and the absence of app accounts, ads, analytics, IAP or tracking SDKs. Store privacy labels must be reconciled with the shipped app before release.
 - Version 1.0.0 build 1 is marked in development/unreleased. The changelog is a current feature record, not a public launch announcement.
 
 ## Site notes

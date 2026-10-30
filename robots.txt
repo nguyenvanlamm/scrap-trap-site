@@ -1,8 +1,7 @@
-# This policy applies to the /trap-website/ GitHub Pages project path.
-# It is not a domain-root robots policy; maintain that separately at the domain root.
+# Domain-root robots policy for pitfall.lamnv.com.
 User-agent: *
 Allow: /
-Sitemap: https://luongnv.com/trap-website/sitemap.xml
+Sitemap: https://pitfall.lamnv.com/sitemap.xml
 
 # AI crawlers are explicitly welcome (training, search, and on-demand retrieval).
 User-agent: GPTBot
