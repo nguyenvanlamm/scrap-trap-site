@@ -6,9 +6,9 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const base = 'https://pitfall.lamnv.com/';
 const issueForms = {
-  bug: 'https://github.com/nguyenvanlamm/trap-website/issues/new?template=bug_report.yml',
-  feature: 'https://github.com/nguyenvanlamm/trap-website/issues/new?template=feature_request.yml',
-  feedback: 'https://github.com/nguyenvanlamm/trap-website/issues/new?template=feedback.yml',
+  bug: 'https://github.com/nguyenvanlamm/scrap-trap-site/issues/new?template=bug_report.yml',
+  feature: 'https://github.com/nguyenvanlamm/scrap-trap-site/issues/new?template=feature_request.yml',
+  feedback: 'https://github.com/nguyenvanlamm/scrap-trap-site/issues/new?template=feedback.yml',
 };
 const pages = [
   { file: 'index.html', lang: 'en', canonical: base, languageHref: 'vi/index.html', type: 'VideoGame', mustContain: ['The factory', 'Scan the illustration'], faqCount: 5 },

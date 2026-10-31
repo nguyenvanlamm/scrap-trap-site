@@ -45,9 +45,9 @@ If the repository owner, repository name, or canonical host changes, update all 
 
 ## Content provenance
 
-The game facts are transcribed from the companion Flutter source repository’s [`README.md`](https://github.com/nguyenvanlamm/cam_bay/blob/master/README.md), [`README.vi.md`](https://github.com/nguyenvanlamm/cam_bay/blob/master/README.vi.md), and the palette/tuning/world-painter files. Those sources establish the 12 levels, three acts, 13 trap types, battery economy, Scan/EMP costs and ranges, checkpoint memory, power-core alarm, and crusher escape. The maintainer confirmed planned Google Play and Apple App Store availability; neither listing is live yet. The hero artwork and social card are original site illustrations; the caption explicitly identifies the hero as an illustration, not a gameplay screenshot.
+The game facts are transcribed from the companion Flutter source repository’s [`README.md`](https://github.com/nguyenvanlamm/scrap-trap/blob/master/README.md), [`README.vi.md`](https://github.com/nguyenvanlamm/scrap-trap/blob/master/README.vi.md), and the palette/tuning/world-painter files. Those sources establish the 12 levels, three acts, 13 trap types, battery economy, Scan/EMP costs and ranges, checkpoint memory, power-core alarm, and crusher escape. The maintainer confirmed planned Google Play and Apple App Store availability; neither listing is live yet. The hero artwork and social card are original site illustrations; the caption explicitly identifies the hero as an illustration, not a gameplay screenshot.
 
-Development source: <https://github.com/nguyenvanlamm/cam_bay>. Ownership, store links, release wording, or canonical URLs should only be changed when verified by the project owner. Replace the two non-link store status labels with real store URLs only after each listing is public and verified.
+Development source: <https://github.com/nguyenvanlamm/scrap-trap>. Ownership, store links, release wording, or canonical URLs should only be changed when verified by the project owner. Replace the two non-link store status labels with real store URLs only after each listing is public and verified.
 
 ## Small future experiments
 

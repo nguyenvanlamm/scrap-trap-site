@@ -12,7 +12,7 @@
 - Vietnamese privacy notice: https://pitfall.lamnv.com/vi/privacy/
 - English changelog: https://pitfall.lamnv.com/changelog/
 - Vietnamese changelog: https://pitfall.lamnv.com/vi/changelog/
-- Development source: https://github.com/nguyenvanlamm/cam_bay
+- Development source: https://github.com/nguyenvanlamm/scrap-trap
 
 ## Verified game facts
 
