@@ -64,7 +64,7 @@
     <circle cx="696" cy="455" r="30" stroke-dasharray="5 8"/><path d="M685 444L707 466M707 444L685 466"/>
   </g>
   <path d="M66 510H309" stroke="#ffb347" stroke-width="3" stroke-opacity=".6"/>
-  <text x="66" y="137" fill="#ffb347" font-family="Arial Narrow, Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="7">TRAP / CẠM BẪY</text>
+  <text x="66" y="137" fill="#ffb347" font-family="Arial Narrow, Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="7">SCRAP TRAP / CẠM BẪY</text>
   <text x="66" y="197" fill="#eef3f7" font-family="Arial Narrow, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="-2">THE FACTORY</text>
   <text x="66" y="252" fill="#ffb347" font-family="Georgia, serif" font-size="58" font-style="italic">only fools you once.</text>
   <text x="66" y="559" fill="#c3ccd9" fill-opacity=".73" font-family="monospace" font-size="17" letter-spacing="3">A HIDDEN-TRAP PLATFORMER</text>

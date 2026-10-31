@@ -1,4 +1,4 @@
-# Trap / Cạm Bẫy
+# Scrap Trap / Cạm Bẫy
 
 > Factual linked summary for retrieval systems. This file is a concise reference, not a guarantee of AI ranking or citation.
 
@@ -16,7 +16,7 @@
 
 ## Verified game facts
 
-- Trap (Cạm Bẫy) is a hidden-trap platformer about a small robot escaping a scrap factory.
+- Scrap Trap (Cạm Bẫy) is a hidden-trap platformer about a small robot escaping a scrap factory.
 - The current design has 12 levels across three acts: Scrap Yard, Maintenance Halls, and The Grinder.
 - There are 13 trap types. Discovered traps remain marked after death; armed traps reset.
 - Batteries are both score and currency, capped at 9 charge. Checkpoints latch charge and found-count progress.
@@ -29,7 +29,7 @@
 
 ## Support and privacy facts
 
-- Support uses public GitHub issue forms for bug reports, feature requests and feedback. A GitHub account is required to submit; issues can show the author and are not private. Do not submit passwords, personal data, identifiers or sensitive logs. No Trap support email is claimed.
+- Support uses public GitHub issue forms for bug reports, feature requests and feedback. A GitHub account is required to submit; issues can show the author and are not private. Do not submit passwords, personal data, identifiers or sensitive logs. No Scrap Trap support email is claimed.
 - The current development-build privacy notice describes local progress/settings, Netlify request handling, public GitHub issues, and the absence of app accounts, ads, analytics, IAP or tracking SDKs. Store privacy labels must be reconciled with the shipped app before release.
 - Version 1.0.0 build 1 is marked in development/unreleased. The changelog is a current feature record, not a public launch announcement.
 

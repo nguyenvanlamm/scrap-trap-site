@@ -1,6 +1,6 @@
-# Trap / Cạm Bẫy — landing site
+# Scrap Trap / Cạm Bẫy — landing site
 
-A dependency-free English/Vietnamese landing site for **Trap**, the hidden-trap mobile platformer. The production target is:
+A dependency-free English/Vietnamese landing site for **Scrap Trap**, the hidden-trap mobile platformer. The production target is:
 
 - English: <https://pitfall.lamnv.com/>
 - Vietnamese: <https://pitfall.lamnv.com/vi/>
