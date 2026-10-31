@@ -57,7 +57,7 @@ for (const page of pages) {
   const html = read(page.file);
   check(/<html\s+lang=["']en["']/i.test(html), `${page.file}: html lang must be en`);
   check(html.includes(`<link rel="canonical" href="${page.canonical}">`), `${page.file}: canonical URL is missing or wrong`);
-  check(!/hreflang=|og:locale:alternate|lang=["']vi["']|href=["'][^"']*\bvi\//i.test(html), `${page.file}: site is English-only; remove alternate-language links`);
+  check(!/Vietnamese|hreflang=|og:locale:alternate|lang=["']vi["']|href=["'][^"']*\bvi\//i.test(html), `${page.file}: site is English-only; remove alternate-language links`);
   check(/<title>[^<]+<\/title>/.test(html), `${page.file}: title is missing`);
   check(html.includes(`<meta name="description" content="`), `${page.file}: meta description is missing`);
   check(html.includes(`<meta property="og:url" content="${page.canonical}">`), `${page.file}: Open Graph URL must match canonical`);
@@ -90,6 +90,7 @@ for (const page of pages) {
         check(primary.url === page.canonical, `${page.file}: JSON-LD URL must match canonical`);
         if (page.type === 'VideoGame') {
           check(Array.isArray(primary.gamePlatform) && primary.gamePlatform.includes('Android') && primary.gamePlatform.includes('iOS'), `${page.file}: JSON-LD planned platforms must include Android and iOS`);
+          check(primary.inLanguage === 'en', `${page.file}: VideoGame JSON-LD language must be en`);
         } else {
           check(primary.inLanguage === 'en', `${page.file}: WebPage JSON-LD language must be en`);
         }
@@ -148,6 +149,7 @@ const robots = read('robots.txt');
 check(robots.includes(`Sitemap: ${base}sitemap.xml`), 'robots.txt must point to sitemap.xml');
 const llms = read('llms.txt');
 for (const page of pages) check(llms.includes(page.canonical), `llms.txt is missing ${page.canonical}`);
+check(!/Vietnamese/i.test(llms), 'llms.txt must not claim Vietnamese support');
 check(llms.includes('not a guarantee of AI ranking'), 'llms.txt must state its factual, non-ranking purpose');
 const readme = read('README.md');
 for (const route of ['support/', 'privacy/', 'changelog/']) check(readme.includes(`${base}${route}`), `README is missing ${route} submission URL`);
