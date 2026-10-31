@@ -12,14 +12,14 @@
 ## Verified game facts
 
 - Scrap Trap is a hidden-trap platformer about a small robot escaping a scrap factory.
-- The current design has 12 levels across three acts: Scrap Yard, Maintenance Halls, and The Grinder.
-- There are 13 trap types. Discovered traps remain marked after death; armed traps reset.
+- The current build has 20 levels: levels 1–3 are free introductions, 4–8 are medium, 9–14 are hard with one new mechanism per level, 15–19 combine mechanisms, and level 20 (THE FINAL CRUSH) is the finale.
+- There are 15 trap and mechanism types, including spike beds, saws, dart muzzles, falling blocks, conveyors, fans, lasers, fake exits, reversed controls and flipped gravity. Discovered traps remain marked after death; armed traps reset.
 - Batteries are both score and currency, capped at 9 charge. Checkpoints latch charge and found-count progress.
 - Scan costs 1 battery and reveals hidden traps within a 5.5-cell radius.
 - EMP costs 2 batteries and freezes nearby mechanisms within 5 cells for 2.6 seconds. Passive geometry remains dangerous.
 - Every level except the first uses a power core to unlock the true exit. Pulling it starts the crusher escape phase.
 - Touch controls use move buttons on the left, jump on the right, and Scan/EMP beside jump. Jump height can be shortened by releasing early.
-- The current build has an English-only UI, bundled audio, persisted audio/accessibility settings, ranks and challenge goals.
+- The current build has an English-only UI, bundled sound effects with a remembered mute toggle, haptic feedback, and an S/A/B/C rank per level based on deaths and time against par.
 - Levels 1–3 are free. The remaining levels unlock with one optional, one-time in-app purchase (non-consumable, with Restore purchase); the price is set in each store and is not claimed here.
 - The game is planned for Android and iOS. Google Play and Apple App Store listings are both coming soon; no public store download URLs or release date are claimed here.
 

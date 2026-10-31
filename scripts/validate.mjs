@@ -11,7 +11,7 @@ const issueForms = {
   feedback: 'https://github.com/nguyenvanlamm/scrap-trap-site/issues/new?template=feedback.yml',
 };
 const pages = [
-  { file: 'index.html', canonical: base, type: 'VideoGame', mustContain: ['The factory', 'Scan the illustration'], faqCount: 5 },
+  { file: 'index.html', canonical: base, type: 'VideoGame', mustContain: ['The factory', 'Scan the illustration', '<dt>20</dt><dd>levels</dd>'], faqCount: 5 },
   { file: 'support/index.html', canonical: `${base}support/`, type: 'WebPage', mustContain: ['Report a bug', 'Suggest a feature', 'Send feedback'], issueForms: true },
   { file: 'privacy/index.html', canonical: `${base}privacy/`, type: 'WebPage', mustContain: ['Current development build', 'Stored by the app', 'In-app purchase', 'Restore purchase'], },
   { file: 'changelog/index.html', canonical: `${base}changelog/`, type: 'WebPage', mustContain: ['1.0.0', 'In development / unreleased'], },
@@ -150,6 +150,10 @@ check(robots.includes(`Sitemap: ${base}sitemap.xml`), 'robots.txt must point to 
 const llms = read('llms.txt');
 for (const page of pages) check(llms.includes(page.canonical), `llms.txt is missing ${page.canonical}`);
 check(!/Vietnamese/i.test(llms), 'llms.txt must not claim Vietnamese support');
+// Facts from the diverged master branch that the ios release build does not have.
+const staleClaims = /\b12 levels\b|three acts|13 trap|challenge goals?|no-death|left-handed|reduced motion/i;
+for (const page of pages) check(!staleClaims.test(read(page.file)), `${page.file}: contains a claim from the old master-branch build`);
+check(!staleClaims.test(llms), 'llms.txt contains a claim from the old master-branch build');
 check(llms.includes('not a guarantee of AI ranking'), 'llms.txt must state its factual, non-ranking purpose');
 const readme = read('README.md');
 for (const route of ['support/', 'privacy/', 'changelog/']) check(readme.includes(`${base}${route}`), `README is missing ${route} submission URL`);
