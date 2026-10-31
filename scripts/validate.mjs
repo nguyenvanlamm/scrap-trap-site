@@ -11,14 +11,10 @@ const issueForms = {
   feedback: 'https://github.com/nguyenvanlamm/scrap-trap-site/issues/new?template=feedback.yml',
 };
 const pages = [
-  { file: 'index.html', lang: 'en', canonical: base, languageHref: 'vi/index.html', type: 'VideoGame', mustContain: ['The factory', 'Scan the illustration'], faqCount: 5 },
-  { file: 'vi/index.html', lang: 'vi', canonical: `${base}vi/`, languageHref: '../index.html', type: 'VideoGame', mustContain: ['Nhà máy', 'Quét minh họa'], faqCount: 5 },
-  { file: 'support/index.html', lang: 'en', canonical: `${base}support/`, languageHref: '../vi/support/', type: 'WebPage', mustContain: ['Report a bug', 'Suggest a feature', 'Send feedback'], issueForms: true },
-  { file: 'vi/support/index.html', lang: 'vi', canonical: `${base}vi/support/`, languageHref: '../../support/', type: 'WebPage', mustContain: ['Báo lỗi', 'Đề xuất tính năng', 'Gửi phản hồi'], issueForms: true },
-  { file: 'privacy/index.html', lang: 'en', canonical: `${base}privacy/`, languageHref: '../vi/privacy/', type: 'WebPage', mustContain: ['Current development build', 'Stored by the app'], },
-  { file: 'vi/privacy/index.html', lang: 'vi', canonical: `${base}vi/privacy/`, languageHref: '../../privacy/', type: 'WebPage', mustContain: ['Bản phát triển', 'Ứng dụng lưu'], },
-  { file: 'changelog/index.html', lang: 'en', canonical: `${base}changelog/`, languageHref: '../vi/changelog/', type: 'WebPage', mustContain: ['1.0.0', 'In development / unreleased'], },
-  { file: 'vi/changelog/index.html', lang: 'vi', canonical: `${base}vi/changelog/`, languageHref: '../../changelog/', type: 'WebPage', mustContain: ['1.0.0', 'Đang phát triển / chưa phát hành'], },
+  { file: 'index.html', canonical: base, type: 'VideoGame', mustContain: ['The factory', 'Scan the illustration'], faqCount: 5 },
+  { file: 'support/index.html', canonical: `${base}support/`, type: 'WebPage', mustContain: ['Report a bug', 'Suggest a feature', 'Send feedback'], issueForms: true },
+  { file: 'privacy/index.html', canonical: `${base}privacy/`, type: 'WebPage', mustContain: ['Current development build', 'Stored by the app', 'In-app purchase', 'Restore purchase'], },
+  { file: 'changelog/index.html', canonical: `${base}changelog/`, type: 'WebPage', mustContain: ['1.0.0', 'In development / unreleased'], },
 ];
 const errors = [];
 const check = (condition, message) => { if (!condition) errors.push(message); };
@@ -59,27 +55,21 @@ function checkFragments(pageFile, html) {
 
 for (const page of pages) {
   const html = read(page.file);
-  check(new RegExp(`<html\\s+lang=["']${page.lang}["']`, 'i').test(html), `${page.file}: html lang must be ${page.lang}`);
+  check(/<html\s+lang=["']en["']/i.test(html), `${page.file}: html lang must be en`);
   check(html.includes(`<link rel="canonical" href="${page.canonical}">`), `${page.file}: canonical URL is missing or wrong`);
-  check(html.includes(`<link rel="alternate" hreflang="en" href="${page.lang === 'en' ? page.canonical : page.canonical.replace('/vi/', '/')}">`), `${page.file}: English hreflang is missing or wrong`);
-  const viCanonical = page.lang === 'vi' ? page.canonical : `${base}${page.file === 'index.html' ? 'vi/' : `vi/${page.file.replace('/index.html', '/')}`}`;
-  check(html.includes(`<link rel="alternate" hreflang="vi" href="${viCanonical}">`), `${page.file}: Vietnamese hreflang is missing or wrong`);
-  const xDefault = page.lang === 'vi' ? page.canonical.replace('/vi/', '/') : page.canonical;
-  check(html.includes(`<link rel="alternate" hreflang="x-default" href="${xDefault}">`), `${page.file}: x-default hreflang is missing or wrong`);
+  check(!/hreflang=|og:locale:alternate|lang=["']vi["']|href=["'][^"']*\bvi\//i.test(html), `${page.file}: site is English-only; remove alternate-language links`);
   check(/<title>[^<]+<\/title>/.test(html), `${page.file}: title is missing`);
   check(html.includes(`<meta name="description" content="`), `${page.file}: meta description is missing`);
   check(html.includes(`<meta property="og:url" content="${page.canonical}">`), `${page.file}: Open Graph URL must match canonical`);
   check(html.includes(`<meta property="og:image" content="${base}assets/social-card.png">`), `${page.file}: absolute social image is missing`);
   check(html.includes(`<meta name="twitter:image" content="${base}assets/social-card.png">`), `${page.file}: twitter image is missing`);
-  check(html.includes(`href="${page.languageHref}"`), `${page.file}: language switch does not point to the equivalent page`);
   const references = localReferences(page.file, html);
-  const localeRoot = page.lang === 'vi' ? 'vi/' : '';
   for (const route of ['support', 'privacy', 'changelog']) {
-    const expected = join(root, localeRoot, route, 'index.html');
-    check(references.some(({ target }) => target === expected), `${page.file}: missing localized ${route} navigation`);
+    const expected = join(root, route, 'index.html');
+    check(references.some(({ target }) => target === expected), `${page.file}: missing ${route} navigation`);
   }
   const brandHref = html.match(/<a class="brand" href="([^"]+)"/)?.[1];
-  check(brandHref && localTarget(page.file, brandHref) === join(root, localeRoot, 'index.html'), `${page.file}: brand must link to localized home`);
+  check(brandHref && localTarget(page.file, brandHref) === join(root, 'index.html'), `${page.file}: brand must link to home`);
   check(html.includes('class="footer-links"'), `${page.file}: footer links are missing`);
   for (const marker of page.mustContain) check(html.includes(marker), `${page.file}: expected content marker missing: ${marker}`);
   if (page.faqCount !== undefined) check((html.match(/<details\b/g) ?? []).length === page.faqCount, `${page.file}: landing FAQ must contain exactly five questions`);
@@ -101,7 +91,7 @@ for (const page of pages) {
         if (page.type === 'VideoGame') {
           check(Array.isArray(primary.gamePlatform) && primary.gamePlatform.includes('Android') && primary.gamePlatform.includes('iOS'), `${page.file}: JSON-LD planned platforms must include Android and iOS`);
         } else {
-          check(primary.inLanguage === page.lang, `${page.file}: WebPage JSON-LD language must match HTML`);
+          check(primary.inLanguage === 'en', `${page.file}: WebPage JSON-LD language must be en`);
         }
       }
       for (const node of nodes) {
@@ -144,6 +134,7 @@ for (const file of ['bug_report.yml', 'feature_request.yml', 'feedback.yml']) {
     check(/^title:\s*.+/m.test(yaml), `${file}: title is missing`);
     check(/^body:\s*$/m.test(yaml), `${file}: body is missing`);
     check(!/^labels:/m.test(yaml), `${file}: do not reference unverified labels`);
+    check(!/[À-ỹ]/.test(yaml), `${file}: issue templates are English-only`);
   }
 }
 const issueConfig = read('.github/ISSUE_TEMPLATE/config.yml');
@@ -151,7 +142,8 @@ check(/^blank_issues_enabled:\s*false\s*$/m.test(issueConfig), 'issue template c
 
 const sitemap = read('sitemap.xml');
 for (const page of pages) check(sitemap.includes(`<loc>${page.canonical}</loc>`), `sitemap.xml is missing ${page.canonical}`);
-check((sitemap.match(/<loc>/g) ?? []).length === pages.length, 'sitemap.xml must contain exactly eight routes');
+check((sitemap.match(/<loc>/g) ?? []).length === pages.length, `sitemap.xml must contain exactly ${pages.length} routes`);
+check(!sitemap.includes('hreflang'), 'sitemap.xml must not list alternate-language routes');
 const robots = read('robots.txt');
 check(robots.includes(`Sitemap: ${base}sitemap.xml`), 'robots.txt must point to sitemap.xml');
 const llms = read('llms.txt');

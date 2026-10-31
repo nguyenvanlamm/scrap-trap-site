@@ -1,4 +1,4 @@
-/* Scrap Trap / Cạm Bẫy — a small, dependency-free visual system. */
+/* Scrap Trap — a small, dependency-free visual system. */
 :root {
   --bg: #070a0f;
   --bg-raised: #0d131c;
@@ -168,13 +168,6 @@ a:hover { color: var(--steel-bright); }
   letter-spacing: .14em;
 }
 
-.brand-word small {
-  margin-top: 4px;
-  color: var(--steel-dim);
-  font-size: .53rem;
-  letter-spacing: .23em;
-}
-
 .primary-nav {
   display: flex;
   min-width: 0;
@@ -184,7 +177,6 @@ a:hover { color: var(--steel-bright); }
 }
 
 .primary-nav a,
-.language-link,
 .footer-links a {
   position: relative;
   color: var(--steel-muted);
@@ -194,7 +186,6 @@ a:hover { color: var(--steel-bright); }
 }
 
 .primary-nav a::after,
-.language-link::after,
 .footer-links a::after {
   position: absolute;
   right: 0;
@@ -210,23 +201,11 @@ a:hover { color: var(--steel-bright); }
 
 .primary-nav a:hover::after,
 .primary-nav a:focus-visible::after,
-.language-link:hover::after,
-.language-link:focus-visible::after,
 .footer-links a:hover::after,
 .footer-links a:focus-visible::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-
-.language-link {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 7px;
-  color: var(--amber);
-}
-
-.language-link span { font-size: 1rem; }
 
 .eyebrow {
   display: flex;
@@ -867,7 +846,6 @@ details p { max-width: 650px; margin: -3px 45px 24px 0; color: var(--steel-muted
   .nav-shell { min-height: 69px; flex-wrap: wrap; gap: 0; padding-top: 15px; padding-bottom: 15px; }
   .primary-nav { order: 3; flex-basis: 100%; justify-content: space-between; gap: 12px; padding-top: 18px; }
   .primary-nav a { font-size: .68rem; }
-  .language-link { margin-left: auto; }
   .hero { display: block; min-height: 0; padding-top: 78px; padding-bottom: 86px; }
   .hero-copy { max-width: 690px; }
   .hero-art { max-width: 700px; margin: 65px auto 0; }

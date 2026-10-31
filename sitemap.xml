@@ -1,60 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pitfall.lamnv.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pitfall.lamnv.com/"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://pitfall.lamnv.com/vi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitfall.lamnv.com/"/>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://pitfall.lamnv.com/vi/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pitfall.lamnv.com/"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://pitfall.lamnv.com/vi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitfall.lamnv.com/"/>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://pitfall.lamnv.com/support/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pitfall.lamnv.com/support/"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://pitfall.lamnv.com/vi/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitfall.lamnv.com/support/"/>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://pitfall.lamnv.com/vi/support/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pitfall.lamnv.com/support/"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://pitfall.lamnv.com/vi/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitfall.lamnv.com/support/"/>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://pitfall.lamnv.com/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pitfall.lamnv.com/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://pitfall.lamnv.com/vi/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitfall.lamnv.com/privacy/"/>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://pitfall.lamnv.com/vi/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pitfall.lamnv.com/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://pitfall.lamnv.com/vi/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitfall.lamnv.com/privacy/"/>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://pitfall.lamnv.com/changelog/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pitfall.lamnv.com/changelog/"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://pitfall.lamnv.com/vi/changelog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitfall.lamnv.com/changelog/"/>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://pitfall.lamnv.com/vi/changelog/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pitfall.lamnv.com/changelog/"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://pitfall.lamnv.com/vi/changelog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitfall.lamnv.com/changelog/"/>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
 </urlset>

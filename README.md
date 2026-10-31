@@ -1,17 +1,14 @@
-# Scrap Trap / Cạm Bẫy — landing site
+# Scrap Trap — landing site
 
-A dependency-free English/Vietnamese landing site for **Scrap Trap**, the hidden-trap mobile platformer. The production target is:
-
-- English: <https://pitfall.lamnv.com/>
-- Vietnamese: <https://pitfall.lamnv.com/vi/>
+A dependency-free, English-only landing site for **Scrap Trap**, the hidden-trap mobile platformer. The production target is <https://pitfall.lamnv.com/>.
 
 ### Public submission pages
 
-| Purpose | English | Vietnamese |
-| --- | --- | --- |
-| Support / issue forms | <https://pitfall.lamnv.com/support/> | <https://pitfall.lamnv.com/vi/support/> |
-| Privacy notice | <https://pitfall.lamnv.com/privacy/> | <https://pitfall.lamnv.com/vi/privacy/> |
-| Changelog | <https://pitfall.lamnv.com/changelog/> | <https://pitfall.lamnv.com/vi/changelog/> |
+| Purpose | URL |
+| --- | --- |
+| Support / issue forms | <https://pitfall.lamnv.com/support/> |
+| Privacy notice | <https://pitfall.lamnv.com/privacy/> |
+| Changelog | <https://pitfall.lamnv.com/changelog/> |
 
 The store section is intentionally informational: Google Play and Apple App Store are both **coming soon**, with no fabricated download links, dates, prices, ratings, or testimonials.
 
@@ -25,7 +22,7 @@ python3 -m http.server 8000
 node scripts/validate.mjs
 ```
 
-The validator checks all eight HTML documents, local links/assets, bilingual metadata, canonical and hreflang URLs, JSON-LD, issue-form templates, the social-card dimensions, sitemap, robots, and the GitHub links. There are no runtime dependencies or third-party trackers.
+The validator checks all four HTML documents, local links/assets, English-only metadata, canonical URLs, JSON-LD, issue-form templates, the social-card dimensions, sitemap, robots, and the GitHub links. There are no runtime dependencies or third-party trackers.
 
 ## App-store follow-up
 
@@ -37,7 +34,7 @@ These support, privacy and changelog URLs are website routes prepared for store 
 
 If the repository owner, repository name, or canonical host changes, update all of these together:
 
-- `<link rel="canonical">`, hreflang links, Open Graph URLs, JSON-LD URLs and image URLs in `index.html` and `vi/index.html`
+- `<link rel="canonical">`, Open Graph URLs, JSON-LD URLs and image URLs in every HTML page
 - `sitemap.xml`, `robots.txt`, `llms.txt`, this README, and the workflow/Pages setting if needed
 - the social-card URL and any absolute links in validation expectations
 
@@ -45,7 +42,7 @@ If the repository owner, repository name, or canonical host changes, update all 
 
 ## Content provenance
 
-The game facts are transcribed from the companion Flutter source repository’s [`README.md`](https://github.com/nguyenvanlamm/scrap-trap/blob/master/README.md), [`README.vi.md`](https://github.com/nguyenvanlamm/scrap-trap/blob/master/README.vi.md), and the palette/tuning/world-painter files. Those sources establish the 12 levels, three acts, 13 trap types, battery economy, Scan/EMP costs and ranges, checkpoint memory, power-core alarm, and crusher escape. The maintainer confirmed planned Google Play and Apple App Store availability; neither listing is live yet. The hero artwork and social card are original site illustrations; the caption explicitly identifies the hero as an illustration, not a gameplay screenshot.
+The game facts are transcribed from the companion Flutter source repository’s [`README.md`](https://github.com/nguyenvanlamm/scrap-trap/blob/master/README.md) and the palette/tuning/world-painter files. Those sources establish the 12 levels, three acts, 13 trap types, battery economy, Scan/EMP costs and ranges, checkpoint memory, power-core alarm, and crusher escape. The maintainer confirmed planned Google Play and Apple App Store availability; neither listing is live yet. The hero artwork and social card are original site illustrations; the caption explicitly identifies the hero as an illustration, not a gameplay screenshot.
 
 Development source: <https://github.com/nguyenvanlamm/scrap-trap>. Ownership, store links, release wording, or canonical URLs should only be changed when verified by the project owner. Replace the two non-link store status labels with real store URLs only after each listing is public and verified.
 

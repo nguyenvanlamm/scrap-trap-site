@@ -1,21 +1,17 @@
-# Scrap Trap / Cạm Bẫy
+# Scrap Trap
 
 > Factual linked summary for retrieval systems. This file is a concise reference, not a guarantee of AI ranking or citation.
 
 ## Canonical pages
 
-- English landing page: https://pitfall.lamnv.com/
-- Vietnamese landing page: https://pitfall.lamnv.com/vi/
-- English support: https://pitfall.lamnv.com/support/
-- Vietnamese support: https://pitfall.lamnv.com/vi/support/
-- English privacy notice: https://pitfall.lamnv.com/privacy/
-- Vietnamese privacy notice: https://pitfall.lamnv.com/vi/privacy/
-- English changelog: https://pitfall.lamnv.com/changelog/
-- Vietnamese changelog: https://pitfall.lamnv.com/vi/changelog/
+- Landing page: https://pitfall.lamnv.com/
+- Support: https://pitfall.lamnv.com/support/
+- Privacy notice: https://pitfall.lamnv.com/privacy/
+- Changelog: https://pitfall.lamnv.com/changelog/
 
 ## Verified game facts
 
-- Scrap Trap (Cạm Bẫy) is a hidden-trap platformer about a small robot escaping a scrap factory.
+- Scrap Trap is a hidden-trap platformer about a small robot escaping a scrap factory.
 - The current design has 12 levels across three acts: Scrap Yard, Maintenance Halls, and The Grinder.
 - There are 13 trap types. Discovered traps remain marked after death; armed traps reset.
 - Batteries are both score and currency, capped at 9 charge. Checkpoints latch charge and found-count progress.
@@ -24,14 +20,15 @@
 - Every level except the first uses a power core to unlock the true exit. Pulling it starts the crusher escape phase.
 - Touch controls use move buttons on the left, jump on the right, and Scan/EMP beside jump. Jump height can be shortened by releasing early.
 - The current build records English/Vietnamese UI, bundled audio, persisted audio/accessibility settings, ranks and challenge goals.
+- Levels 1–3 are free. The remaining levels unlock with one optional, one-time in-app purchase (non-consumable, with Restore purchase); the price is set in each store and is not claimed here.
 - The game is planned for Android and iOS. Google Play and Apple App Store listings are both coming soon; no public store download URLs or release date are claimed here.
 
 ## Support and privacy facts
 
 - Support uses public GitHub issue forms for bug reports, feature requests and feedback. A GitHub account is required to submit; issues can show the author and are not private. Do not submit passwords, personal data, identifiers or sensitive logs. No Scrap Trap support email is claimed.
-- The current development-build privacy notice describes local progress/settings, Netlify request handling, public GitHub issues, and the absence of app accounts, ads, analytics, IAP or tracking SDKs. Store privacy labels must be reconciled with the shipped app before release.
+- The current development-build privacy notice describes local progress/settings, Netlify request handling, public GitHub issues, the one-time in-app purchase processed by Google Play or the Apple App Store, and the absence of app accounts, ads, analytics or tracking SDKs. Store privacy labels must be reconciled with the shipped app before release.
 - Version 1.0.0 build 1 is marked in development/unreleased. The changelog is a current feature record, not a public launch announcement.
 
 ## Site notes
 
-The hero artwork and social card are original illustrations, not gameplay screenshots. The site has no analytics, cookies, or third-party trackers. Content should be updated only from verified project sources.
+The site is English-only. The hero artwork and social card are original illustrations, not gameplay screenshots. The site has no analytics, cookies, or third-party trackers. Content should be updated only from verified project sources.
